@@ -87,6 +87,48 @@ ss
 
 
 
+API4:2023 Unrestricted Resource Consumption (Do you know that you can customize your profile? Try it out and make your profile stand out among others.)
+
+we have switched to "Postman"
+upload postman json file
+go to end point
+api/profile/upload
+test with normal behavior
+ss
+successfully uploaded
+now try uploading a huge file (512 mb png file)
+ss
+got the flag!
+
+
+
+API10:2023 Unsafe Consumption of APIs (API's used at the Authentication of the application does not look safe, can you test it and get the flag ??)
+capturing login request and trying sql injection
+ss
+trying blind sql
+{ "$gt": 0 }
+it workedd 
+ss
+we have the flag
+
+
+
+API2:2023 Broken Authentication (Admin has a challenge for you. Admin says anyone who can log in with their account will get some surprise. Can you find out the surprise?)
+even though we have logged in using nosql but we cant see flag.. maybe we have to get flag with some other vulnerability
+this vulnerability has jwt cracking vulnerability
+on /api/user/user
+after crack jwt secret modifying token
+ss
+and signing it with the secret to get valid token
+we got the flag (bcz we gave ourself admin role)
+ss
+
+
+API6:2023 Unrestricted Access to Sensitive Business Flows
+DVAPI is a people first applicaiton. We are keen on knowing your requests through submit ticket function. Maybe it'll help you find the flag !!!
+
+
+
 
 
 
